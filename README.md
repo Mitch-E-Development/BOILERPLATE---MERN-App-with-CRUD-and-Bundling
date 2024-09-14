@@ -138,13 +138,6 @@ git clone https://github.com/Mitch-E-Development/BOILERPLATE---MERN-App-with-CRU
 - For client-side testing, use tools like Jest and React Testing Library.
 - For server-side testing, use tools like Mocha, Chai, and Supertest.
 
-### Contributing
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -am 'Add feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Create a new Pull Request.
 
 ### License
 

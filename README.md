@@ -53,7 +53,6 @@ MERN-Boilerplate/
 
 ```bash
 git clone https://github.com/Mitch-E-Development/BOILERPLATE---MERN-App-with-CRUD-and-Bundling.git
-cd mern-app-boilerplate
 ```
 
 #### Set Up the Client

@@ -1,5 +1,5 @@
 # Boilerplate Code for a MERN Stack App
-**Includes CRUD and search routes, and client/server side bundling.**
+***Includes CRUD and search routes, and client/server side bundling.***
 
 ## Overview
 

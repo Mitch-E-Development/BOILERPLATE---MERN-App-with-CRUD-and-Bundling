@@ -1,3 +1,8 @@
+/* Import Tailwind's base styles, which include default styling for elements and normalize styles */
 @tailwind base;
+
+/* Import Tailwind's component classes, which include pre-defined classes for common UI components */
 @tailwind components;
+
+/* Import Tailwind's utility classes, which provide low-level utility functions for styling elements */
 @tailwind utilities;

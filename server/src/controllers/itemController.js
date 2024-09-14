@@ -1,6 +1,19 @@
+/**
+ * @file itemController.js
+ * @description Controller functions for handling CRUD operations on items.
+ * @module controllers/itemController
+ * @requires ../models/itemModel.js
+ */
+
 const Item = require('../models/itemModel.js');
 
-// Create a new item
+/**
+ * Create a new item.
+ * @function createItem
+ * @param {Object} req - The request object, containing the item data in `req.body`.
+ * @param {Object} res - The response object.
+ * @returns {Object} The newly created item or an error message.
+ */
 exports.createItem = async (req, res) => {
   try {
     const item = new Item(req.body);
@@ -11,7 +24,13 @@ exports.createItem = async (req, res) => {
   }
 };
 
-// Get all items
+/**
+ * Get all items.
+ * @function getAllItems
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @returns {Array} An array of items or an error message.
+ */
 exports.getAllItems = async (req, res) => {
   try {
     const items = await Item.find();
@@ -21,7 +40,13 @@ exports.getAllItems = async (req, res) => {
   }
 };
 
-// Search items
+/**
+ * Search for items based on a query.
+ * @function searchItems
+ * @param {Object} req - The request object, containing the search query in `req.query.query`.
+ * @param {Object} res - The response object.
+ * @returns {Array} An array of items that match the search query or an error message.
+ */
 exports.searchItems = async (req, res) => {
   try {
     const { query } = req.query;
@@ -37,7 +62,13 @@ exports.searchItems = async (req, res) => {
   }
 };
 
-// Update an item
+/**
+ * Update an existing item by ID.
+ * @function updateItem
+ * @param {Object} req - The request object, containing the item ID in `req.params.id` and update data in `req.body`.
+ * @param {Object} res - The response object.
+ * @returns {Object} The updated item or an error message if the item is not found.
+ */
 exports.updateItem = async (req, res) => {
   try {
     const item = await Item.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -50,7 +81,13 @@ exports.updateItem = async (req, res) => {
   }
 };
 
-// Delete an item
+/**
+ * Delete an item by ID.
+ * @function deleteItem
+ * @param {Object} req - The request object, containing the item ID in `req.params.id`.
+ * @param {Object} res - The response object.
+ * @returns {Object} A confirmation message or an error message if the item is not found.
+ */
 exports.deleteItem = async (req, res) => {
   try {
     const item = await Item.findByIdAndDelete(req.params.id);

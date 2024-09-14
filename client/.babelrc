@@ -1,4 +1,12 @@
 {
-    "presets": ["@babel/preset-env", "@babel/preset-react"]
-  }
-  
+  // Babel presets specify the rules for transforming your code.
+  "presets": [
+    // @babel/preset-env: Transpiles modern JavaScript (ES6+) to a version that is compatible with older browsers.
+    // It automatically includes necessary polyfills and plugins based on the target environments specified.
+    "@babel/preset-env",
+    
+    // @babel/preset-react: Transforms JSX syntax and React code into plain JavaScript.
+    // This is necessary to convert JSX into `React.createElement` calls that browsers can understand.
+    "@babel/preset-react"
+  ]
+}

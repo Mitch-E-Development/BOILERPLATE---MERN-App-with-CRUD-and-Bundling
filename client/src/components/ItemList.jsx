@@ -2,10 +2,25 @@ import React from 'react';
 import { deleteItem } from '../services/itemService';
 import ItemForm from './ItemForm';
 
+/**
+ * ItemList component for displaying a list of items and providing options to delete or edit them.
+ * @component
+ * @param {Object} props - Component properties.
+ * @param {Array<Object>} props.items - Array of item objects to display in the list.
+ * @param {Function} props.onItemUpdated - Callback function to be called after an item is updated or deleted.
+ * @returns {JSX.Element} The rendered ItemList component.
+ */
 const ItemList = ({ items, onItemUpdated }) => {
+  /**
+   * Handle item deletion by calling the deleteItem service and updating the item list.
+   * @param {string} id - The ID of the item to delete.
+   * @async
+   * @function
+   */
   const handleDelete = async (id) => {
     try {
       await deleteItem(id);
+      // Notify parent component that an item has been updated (deleted)
       onItemUpdated();
     } catch (error) {
       console.error('Failed to delete item:', error);
